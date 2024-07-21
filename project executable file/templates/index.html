@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Consumption Analysis</title>
+    <style>
+        body {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        .form-group input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Power Consumption Analysis</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <input type="number" step="0.1" min="0" max="1" name="Global_reactive_power" placeholder="Enter the Global reactive power value (0-1)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.1" name="Voltage" placeholder="Enter the Voltage" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Global_intensity" placeholder="Enter the Global intensity value" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Sub_metering_1" placeholder="Enter the Submeter Reading 1" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Sub_metering_2" placeholder="Enter the Submeter Reading 2" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Sub_metering_3" placeholder="Enter the Submeter Reading 3" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Year" placeholder="Enter the Year" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Month" placeholder="Enter the Month" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="Sub_metering_4" placeholder="Enter the Submeter Reading 4" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Predict</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
